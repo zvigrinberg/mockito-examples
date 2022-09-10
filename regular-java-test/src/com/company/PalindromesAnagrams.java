@@ -3,15 +3,16 @@ package com.company;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class PalindromesAnagrams {
 
     public static void main(String[] args) {
-	// write your code here
+        PalindromesAnagrams palindromesAnagrams = new PalindromesAnagrams();
+        palindromesAnagrams.isPalindromeAnagram("aabb");
     }
 
     boolean isPalindromeAnagram(String str) {
         char[] chars = str.toCharArray();
-        Map occurrences = new <Character,Integer> HashMap();
+        Map <Character,Integer> occurrences = new HashMap();
         Integer temp;
         for (int i = 0; i < chars.length; i++) {
             Integer charOccurences = (Integer)occurrences.get(chars[i]);
