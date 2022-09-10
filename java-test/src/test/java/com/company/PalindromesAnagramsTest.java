@@ -16,7 +16,12 @@ public class PalindromesAnagramsTest {
     @Test
     public void isPalindromeAnagram() {
         assertTrue(palindromesAnagrams.isPalindromeAnagram("aabb"));
-        assertFalse(palindromesAnagrams.isPalindromeAnagram("aabbb"));
+        assertTrue(palindromesAnagrams.isPalindromeAnagram("aabbb"));
+        assertFalse(palindromesAnagrams.isPalindromeAnagram("aabbbccc"));
+        assertTrue(palindromesAnagrams.isPalindromeAnagram("aabbbcc"));
+        assertFalse(palindromesAnagrams.isPalindromeAnagram("aaabbb"));
+        assertFalse(palindromesAnagrams.isPalindromeAnagram("199244593"));
+
 
     }
 }

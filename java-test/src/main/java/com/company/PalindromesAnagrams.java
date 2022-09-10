@@ -6,8 +6,7 @@ import java.util.Map;
 public class PalindromesAnagrams {
 
     public static void main(String[] args) {
-        PalindromesAnagrams palindromesAnagrams = new PalindromesAnagrams();
-        palindromesAnagrams.isPalindromeAnagram("aabb");
+
     }
 
     boolean isPalindromeAnagram(String str) {
@@ -18,7 +17,7 @@ public class PalindromesAnagrams {
             Integer charOccurences = (Integer)occurrences.get(chars[i]);
             if(charOccurences == null)
             {
-                occurrences.put(chars[i],0);
+                occurrences.put(chars[i],1);
             }
 
             else
@@ -28,20 +27,26 @@ public class PalindromesAnagrams {
             }
 
         }
-        Integer[] numOfOccurences = (Integer[])(occurrences.values().toArray());
+        Integer[] numOfOccurrences = new Integer[str.length()];
+        occurrences.values().toArray(numOfOccurrences);
         Integer numOfSingles=0;
         boolean result=true;
-        for (Integer number : numOfOccurences) {
-            if (number == 1 )
+        for (Integer number : numOfOccurrences) {
+            if (number!= null && number % 2 == 1 )
             {
                 numOfSingles++;
             }
             else
             {
-                if(number % 2 !=0)
-                {
-                    result = false;
-                }
+
+              if(number == null )
+                   break;
+
+            }
+            if(numOfSingles > 1)
+            {
+                result = false;
+                break;
             }
 
         }
