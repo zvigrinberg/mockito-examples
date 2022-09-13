@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface CarTestService {
 
-    List<CarBuyingDecision> getCarDetails(String company, int yearModel, String type, Integer maxBudget, boolean insistBudget , String preferredColor, boolean insistColor, Integer preferredMaxNumOfKilometers, boolean insistMaxNumOfKilometers);
+    List<CarBuyingDecision> getCarDetails(String company, int yearModel, Integer maxBudget, boolean insistBudget , String preferredColor, boolean insistColor, Integer preferredMaxNumOfKilometers, boolean insistMaxNumOfKilometers);
 }

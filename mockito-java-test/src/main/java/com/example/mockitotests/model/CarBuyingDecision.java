@@ -15,5 +15,5 @@ public class CarBuyingDecision {
     private boolean metBudgetCriteria;
     private boolean foundMatch;
     private boolean foundIdealMatch;
-    private com.example.mockitotests.model.Car chosenCar;
+    private Car chosenCar;
 }

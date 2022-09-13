@@ -1,8 +1,12 @@
 package com.example.mockitotests.dao;
 
+import com.example.mockitotests.model.Car;
+import com.example.mockitotests.model.CarBuyingDecision;
+
 import java.util.List;
 
 public interface CarsDBAccess {
 
-    List<com.example.mockitotests.model.Car> getAllCarsAccordingToCriteria(String company, Integer yearModel, String type);
+    List<Car> getAllCarsAccordingToCriteria(String company, Integer yearModel);
+    void saveCarBuyingDecisionToDB(List<CarBuyingDecision> buyingDecisions);
 }
